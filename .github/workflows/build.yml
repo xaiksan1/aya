@@ -43,3 +43,10 @@ jobs:
           release/**/*.AppImage
           release/**/*-lates*.yml
           !release/**/win-unpacked/
+    - name: Run tests
+      run: npm test
+    - name: Upload code coverage
+      uses: actions/upload-artifact@v4
+      with:
+        name: code-coverage
+        path: coverage/

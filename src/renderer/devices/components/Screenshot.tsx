@@ -5,17 +5,20 @@ import { useCallback, useRef, useState } from 'react'
 import LunaImageViewer from 'luna-image-viewer/react'
 import { t } from '../../../common/util'
 import { LoadingBar } from 'share/renderer/components/loading'
+import LunaImageViewer, { ImageViewer } from 'luna-image-viewer/react'
+import { useEffect } from 'react'
 
 export default observer(function Screenshot() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [resizerStyle, setResizerStyle] = useState<any>({
     height: '10px',
   })
+  const [imageViewer, setImageViewer] = useState<ImageViewer | null>(null)
 
   let body: JSX.Element | null = null
 
   if (store.device && store.screenshot) {
-    body = <LunaImageViewer image={store.screenshot} />
+    body = <LunaImageViewer image={store.screenshot} onCreate={setImageViewer} />
   } else {
     body = (
       <div className={Style.noScreenshot}>
@@ -54,6 +57,16 @@ export default observer(function Screenshot() {
     document.addEventListener('mousemove', onMouseMove)
     document.addEventListener('mouseup', onMouseUp)
   }, [])
+
+  useEffect(() => {
+    if (imageViewer) {
+      imageViewer.setOptions({
+        zoom: true,
+        quality: true,
+        annotation: true,
+      })
+    }
+  }, [imageViewer])
 
   return (
     <div

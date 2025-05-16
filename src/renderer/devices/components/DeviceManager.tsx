@@ -34,6 +34,9 @@ export default observer(function DeviceManager() {
       androidVersion: `Android ${device.androidVersion} (API ${device.sdkVersion})`,
       status: device.type === 'offline' ? t('offline') : t('online'),
       type: device.type,
+      batteryLevel: device.batteryLevel,
+      storageUsage: device.storageUsage,
+      networkStatus: device.networkStatus,
     }
   })
 
@@ -69,29 +72,47 @@ const columns = [
     id: 'id',
     title: 'ID',
     sortable: true,
-    weight: 15,
+    weight: 10,
   },
   {
     id: 'serialno',
     title: t('serialno'),
     sortable: true,
-    weight: 15,
+    weight: 10,
   },
   {
     id: 'name',
     title: t('name'),
     sortable: true,
-    weight: 30,
+    weight: 20,
   },
   {
     id: 'androidVersion',
     title: t('androidVersion'),
     sortable: true,
-    weight: 30,
+    weight: 20,
   },
   {
     id: 'status',
     title: t('status'),
+    sortable: true,
+    weight: 10,
+  },
+  {
+    id: 'batteryLevel',
+    title: t('batteryLevel'),
+    sortable: true,
+    weight: 10,
+  },
+  {
+    id: 'storageUsage',
+    title: t('storageUsage'),
+    sortable: true,
+    weight: 10,
+  },
+  {
+    id: 'networkStatus',
+    title: t('networkStatus'),
     sortable: true,
     weight: 10,
   },
