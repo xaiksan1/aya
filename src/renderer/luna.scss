@@ -128,3 +128,27 @@ $theme-variables: meta.module-variables(theme);
     border-radius: #{theme.$border-radius-x-s}px;
   }
 }
+
+/* Glowing text and borders */
+.glowing-text {
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.glowing-border {
+  box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+}
+
+/* Animations and transitions for buttons and links */
+button, a {
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover, a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+/* Apply glowing effects to headings, buttons, and other important elements */
+h1, h2, h3, h4, h5, h6, button, .important-element {
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+}
