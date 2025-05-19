@@ -1,5 +1,4 @@
-// light
-export const colorPrimary = `#4fb155`
+export const colorPrimary = `#ff00ff`
 export const colorSuccess = `#52c41a`
 export const colorWarning = `#faad14`
 export const colorError = `#ff4d4f`
@@ -7,11 +6,9 @@ export const colorInfo = `#1677ff`
 export const colorLink = `#1677ff`
 export const colorTextBase = `#000`
 export const colorBgBase = `#fff`
-export const fontFamily = `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-'Noto Color Emoji'`
+export const fontFamily = `Neuropol`
 export const fontFamilyCode = `'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace`
-export const fontSize = `14`
+export const fontSize = `16`
 export const lineWidth = `1`
 export const lineType = `solid`
 export const motionUnit = `0.1`
@@ -34,8 +31,8 @@ export const zIndexPopupBase = `1000`
 export const opacityImage = `1`
 export const wireframe = `false`
 export const motion = `true`
-export const colorBgContainer = `#f7f8fa`
-export const colorBorder = `#c9ccd6`
+export const colorBgContainer = `#0a0a0a`
+export const colorBorder = `#ff00ff`
 export const blue1 = `#e6f4ff`
 export const blue2 = `#bae0ff`
 export const blue3 = `#91caff`
